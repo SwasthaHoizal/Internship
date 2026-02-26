@@ -3,21 +3,21 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 #parameters
-G = 1.0
-m1 = 1.0
-m2 = 1.0
+G = 6.6743E-11
+m2 = 1000
+m1 = 5.972E+24
 
-dt = 0.001
-T = 20
+dt = 0.1
+T = 345600
 N = int(T / dt)
 
 # Initial positions (x, y,z)
-r1 = np.array([-0.5, 0.0, 0.7])
-r2 = np.array([ 0.5, 0.0, 1.0])
+r2 = np.array([-0.326705376530E+06 , -0.150855508550E+06 , -0.102368180470E+06  ])
+r1 = np.array([ 0.0, 0.0, 0.0])
 
 # Initial velocities (vx, vy, vz)
-v1 = np.array([0.9, 0.5, 0.2])
-v2 = np.array([0.6,-0.5,-0.2])
+v2 = np.array([ -0.123303382137E-01 ,  0.151919024675E+00  , 0.200627345004E+00])
+v1 = np.array([0.0,0.0,0.0])
 
 y0 = np.hstack((r1, v1, r2, v2))
 
@@ -113,4 +113,5 @@ plt.ylabel("||r2 − r1||")
 plt.title("Separation vs Time")
 plt.grid()
 plt.show()
+
 
